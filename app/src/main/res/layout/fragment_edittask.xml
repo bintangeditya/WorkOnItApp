@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.edittask.EdittaskFragment">
+    <ImageView
+        android:id="@+id/point"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/point_height"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/btn_back_size"
+        android:layout_height="@dimen/btn_back_size"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintStart_toStartOf="@+id/point"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+
+    <TextView
+        android:id="@+id/tv_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/title_bar_marleft"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="Edit Task"
+        android:textColor="@color/softblack"
+        android:textSize="@dimen/title_bar_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+    <TextView
+        android:id="@+id/btn_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/btn_title_bar_marright"
+        android:text="@string/simpan"
+        android:textColor="@color/btn_title_bar"
+        android:textSize="@dimen/btn_title_bar_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintEnd_toEndOf="@+id/point"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+
+    <ImageView
+        android:id="@+id/title_bar_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/softblack"
+        app:layout_constraintEnd_toEndOf="@+id/point"
+        app:layout_constraintStart_toStartOf="@+id/point"
+        app:layout_constraintTop_toBottomOf="@+id/point" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Judul Task"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="10dp"
+        app:boxBackgroundColor="@color/gray"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar_line">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/deskripsi_task"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="10dp"
+        app:boxBackgroundColor="@color/gray"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@+id/til_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_due_date"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/jatuh_tempo"
+        app:boxBackgroundColor="@color/gray"
+        app:layout_constraintEnd_toStartOf="@+id/btn_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_desc">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_due_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/btn_date"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_tv_gray_c"
+        android:clickable="true"
+        android:padding="17dp"
+        android:src="@drawable/ic_date"
+        app:layout_constraintBottom_toBottomOf="@+id/til_due_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/til_due_date" />
+
+    <LinearLayout
+        android:id="@+id/ll_date_picker"
+        android:visibility="gone"
+        android:background="@drawable/bg_tv_gray_c"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/date_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:layout_marginBottom="40dp"
+            app:picker_curved="true"
+            app:picker_cyclic="true"
+            app:picker_mustBeOnFuture="true"
+            app:picker_visibleItemCount="7" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_hapus"
+            android:fontFamily="@font/roboto_medium"
+            android:text="OK"
+            android:textColor="#1CCDB8"/>
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/blocker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/transparentblack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/loading_blocker"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/loading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

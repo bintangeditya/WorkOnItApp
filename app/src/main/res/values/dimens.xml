@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radius_btn_hc">100dp</dimen>
+    <dimen name="radius_btn_c">10dp</dimen>
+    <dimen name="point_height">60dp</dimen>
+    <dimen name="btn_back_size">22dp</dimen>
+    <dimen name="title_bar_marleft">20dp</dimen>
+    <dimen name="title_bar_text_size">24sp</dimen>
+    <dimen name="btn_title_bar_text_size">18sp</dimen>
+    <dimen name="btn_title_bar_marright">18dp</dimen>
+</resources>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detailbook.DetailbookFragment">
+
+    <ImageView
+        android:id="@+id/point"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/point_height"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/btn_back_size"
+        android:layout_height="@dimen/btn_back_size"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintStart_toStartOf="@+id/point"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+
+    <TextView
+        android:id="@+id/tv_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/title_bar_marleft"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="Detail Book"
+        android:textColor="@color/softblack"
+        android:textSize="@dimen/title_bar_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/btn_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/btn_title_bar_marright"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="@string/edit"
+        android:textColor="@color/btn_title_bar"
+        android:textSize="@dimen/btn_title_bar_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintEnd_toEndOf="@+id/point"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+
+    <ImageView
+        android:id="@+id/title_bar_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/softblack"
+        app:layout_constraintEnd_toEndOf="@+id/point"
+        app:layout_constraintStart_toStartOf="@+id/point"
+        app:layout_constraintTop_toBottomOf="@+id/point" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar_line">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Kode Book"
+                android:textColor="@color/softblack"
+                android:textSize="12sp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_tv_gray_c"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:minHeight="54dp"
+                    android:paddingHorizontal="12dp"
+                    android:textColor="@color/softblack"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_mute"/>
+                <ImageView
+                    android:id="@+id/btn_mute"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_tv_gray_c"
+                    android:clickable="true"
+                    android:padding="17dp"
+                    android:src="@drawable/ic_bell_on"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_code"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_code"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Judul Book"
+                android:textColor="@color/softblack"
+                android:textSize="12sp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:enabled="false"
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_tv_gray_c"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:minHeight="54dp"
+                    android:text=""
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/softblack"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_edit_title"
+                    />
+
+                <ImageView
+                    android:id="@+id/btn_edit_title"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_tv_gray_c"
+                    android:clickable="true"
+                    android:padding="17dp"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_title"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Tipe"
+                android:textColor="@color/softblack"
+                android:textSize="12sp" />
+
+            <Spinner
+                android:id="@+id/spinner_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_tv_gray_c"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:minHeight="54dp"
+                android:textColor="@color/softblack"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Deskripsi"
+                android:textColor="@color/softblack"
+                android:textSize="12sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:enabled="false"
+                    android:id="@+id/tv_desc_book"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_tv_gray_c"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:minHeight="54dp"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="12dp"
+                    android:textColor="@color/softblack"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_edit_desc"/>
+
+                <ImageView
+                    android:id="@+id/btn_edit_desc"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_tv_gray_c"
+                    android:clickable="true"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_desc_book"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_desc_book"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Anggota"
+                android:textColor="@color/softblack"
+                android:textSize="12sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                tools:listitem="@layout/item_anggota" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/bg_btn_hapus"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Hapus"
+                android:textColor="#E91E63" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/blocker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp"
+        android:src="@color/transparentblack"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/loading_blocker"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:elevation="5dp"
+        android:src="@drawable/loading"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

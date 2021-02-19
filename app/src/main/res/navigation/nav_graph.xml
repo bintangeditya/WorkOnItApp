@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="id.co.woiapp.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="id.co.woiapp.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_createbookFragment2"
+            app:destination="@id/createbookFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_booktaskFragment"
+            app:destination="@id/booktaskFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createbookFragment2"
+        android:name="id.co.woiapp.ui.createbook.CreatebookFragment"
+        android:label="fragment_createbook"
+        tools:layout="@layout/fragment_createbook" >
+        <action
+            android:id="@+id/action_createbookFragment2_to_newbookFragment"
+            app:destination="@id/newbookFragment" />
+        <action
+            android:id="@+id/action_createbookFragment2_to_joinbookFragment2"
+            app:destination="@id/joinbookFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/newbookFragment"
+        android:name="id.co.woiapp.ui.newbook.NewbookFragment"
+        android:label="fragment_newbook"
+        tools:layout="@layout/fragment_newbook" >
+        <action
+            android:id="@+id/action_newbookFragment_to_booktaskFragment"
+            app:destination="@id/booktaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinbookFragment2"
+        android:name="id.co.woiapp.ui.joinbook.JoinbookFragment"
+        android:label="fragment_joinbook"
+        tools:layout="@layout/fragment_joinbook" >
+        <action
+            android:id="@+id/action_joinbookFragment2_to_booktaskFragment"
+            app:destination="@id/booktaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/booktaskFragment"
+        android:name="id.co.woiapp.ui.booktask.BooktaskFragment"
+        android:label="fragment_booktask"
+        tools:layout="@layout/fragment_booktask" >
+        <action
+            android:id="@+id/action_booktaskFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_booktaskFragment_to_newtaskFragment"
+            app:destination="@id/newtaskFragment" />
+        <action
+            android:id="@+id/action_booktaskFragment_to_detailtaskFragment"
+            app:destination="@id/detailtaskFragment" />
+        <action
+            android:id="@+id/action_booktaskFragment_to_detailbookFragment"
+            app:destination="@id/detailbookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newtaskFragment"
+        android:name="id.co.woiapp.ui.newtask.NewtaskFragment"
+        android:label="fragment_newtask"
+        tools:layout="@layout/fragment_newtask" />
+    <fragment
+        android:id="@+id/detailtaskFragment"
+        android:name="id.co.woiapp.ui.detailtask.DetailtaskFragment"
+        android:label="fragment_detailtask"
+        tools:layout="@layout/fragment_detailtask" >
+        <action
+            android:id="@+id/action_detailtaskFragment_to_edittaskFragment"
+            app:destination="@id/edittaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/edittaskFragment"
+        android:name="id.co.woiapp.ui.edittask.EdittaskFragment"
+        android:label="fragment_edittask"
+        tools:layout="@layout/fragment_edittask" >
+        <action
+            android:id="@+id/action_edittaskFragment_to_detailtaskFragment"
+            app:destination="@id/detailtaskFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailbookFragment"
+        android:name="id.co.woiapp.ui.detailbook.DetailbookFragment"
+        android:label="fragment_detailbook"
+        tools:layout="@layout/fragment_detailbook" >
+        <action
+            android:id="@+id/action_detailbookFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_detailbookFragment_to_booktaskFragment"
+            app:destination="@id/booktaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="id.co.woiapp.ui.home.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" >
+        <action
+            android:id="@+id/action_profilFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>

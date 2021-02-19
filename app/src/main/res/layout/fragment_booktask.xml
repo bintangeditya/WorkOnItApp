@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.booktask.BooktaskFragment">
+    <ImageView
+        android:id="@+id/point"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/point_height"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/btn_back_size"
+        android:layout_height="@dimen/btn_back_size"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintStart_toStartOf="@+id/point"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+
+    <TextView
+        android:id="@+id/tv_title_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/title_bar_marleft"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="@string/judul_book"
+        android:textColor="@color/softblack"
+        android:textSize="@dimen/title_bar_text_size"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/btn_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/btn_title_bar_marright"
+        android:text="@string/simpan"
+        android:textColor="@color/btn_title_bar"
+        android:textSize="@dimen/btn_title_bar_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintEnd_toEndOf="@+id/point"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+
+    <ImageView
+        android:id="@+id/title_bar_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/softblack"
+        app:layout_constraintEnd_toEndOf="@+id/point"
+        app:layout_constraintStart_toStartOf="@+id/point"
+        app:layout_constraintTop_toBottomOf="@+id/point" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_booktask"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingBottom="80dp"
+                android:clipToPadding="false"
+                android:layout_marginTop="20dp"
+                android:id="@+id/rv_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_task"
+                android:layout_marginHorizontal="10dp"
+                />
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/loading_rv_task"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/loading"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_createtask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/blocker_checkdone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/transparentblack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/loading_checkdone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/loading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

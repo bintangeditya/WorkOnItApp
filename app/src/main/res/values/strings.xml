@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">WorkOnIt</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="book_baru">Book Baru</string>
+    <string name="gabung_book">Gabung Book</string>
+    <string name="book_saya">Book Saya</string>
+    <string name="buat_book">Buat Book</string>
+    <string name="book_id">Book Id</string>
+    <string name="bergabung">Bergabung</string>
+    <string name="simpan">Simpan</string>
+    <string name="judul">Judul</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="judul_book">Judul Book</string>
+    <string name="task_title">Task Title</string>
+    <string name="selamat_datang">Selamat datang</string>
+    <string name="tambah_book">Tambah Book</string>
+    <string name="judul_task">Judul Task</string>
+    <string name="tambah_task">Tambah Task</string>
+    <string name="jatuh_tempo">Jatuh Tempo</string>
+    <string name="deskripsi_task">Deskripsi Task</string>
+    <string name="edit">Edit</string>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "667277419378",
+    "project_id": "workonit-uas-rpl2",
+    "storage_bucket": "workonit-uas-rpl2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667277419378:android:1e02127ed7b26ff67c33eb",
+        "android_client_info": {
+          "package_name": "id.co.woiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667277419378-qc44mvav9a70g0edhcrnrkbookfdjkrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCssmyP0n779vaXcNRx8WphiXS6dzAIHSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667277419378-qc44mvav9a70g0edhcrnrkbookfdjkrg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
